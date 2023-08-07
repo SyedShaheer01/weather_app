@@ -1,6 +1,5 @@
-const search=document.getElementById("find")
-const btn=document.getElementById("btn");
 let getWeather = (search) => {
+    
     
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=133929882321faee452074ec3ea97855&units=metric`)
     
@@ -30,7 +29,7 @@ let getWeather = (search) => {
             }
             else if(res.weather[0].main =="Drizzle"){
                 img.src="./drizzle.png"
-    
+                
             }
             else if(res.weather[0].main =="mist"){
                 img.src="./mist.png"
@@ -38,19 +37,21 @@ let getWeather = (search) => {
             }
             else if(res.weather[0].main =="Clear"){
                 img.src="./clear.png"
-    
+                
             }
             else if(res.weather[0].main =="Snow"){
                 img.src="./snow.png"
-    
-            
+                
+                
             }
         
             
         })
         
         .catch(err=>{
-            console.log(err)
+            // console.log(err)
+
+            alert("invalid city name")
             
             
             
@@ -58,13 +59,15 @@ let getWeather = (search) => {
     
         
     }
+    getWeather()
     
+    const btn=document.getElementById("btn");
     btn.addEventListener("click", ()=>{
         
+        const search=document.getElementById("find")
         getWeather(search.value)
         // console.log(search)
     })
     
-    getWeather()
     
     

@@ -53,7 +53,12 @@ body{
     width: 60px;
     height: 60px;
     cursor: pointer;
+    transition: 0.3s;
     
+}
+.search button:hover{
+    background: #b68ed9;
+    color: #fff;
 }
 .weather-icon{
     width: 160px;
@@ -62,6 +67,7 @@ body{
 
 .search button img{
     width: 16px;
+    
 }
 
 .weather h1{
@@ -98,3 +104,50 @@ body{
   /* .weather{
     display: none;
 } */
+
+
+@media only screen and (max-width:600px){
+
+    body{
+        padding: 5px;
+    }
+    .search button{
+
+        width: 35px;
+        height: 38px;
+        padding: 12px;
+    
+    }
+    .search button img{
+
+        width: 10px;
+    }
+    .main{
+        /* margin: auto; */
+        width: 100%;
+        /* margin: 10px; */
+        /* padding: 2px; */
+        
+    }
+    .search input{
+        font-size: 12px;
+        margin-right: 5px;
+        /* padding: 0px 20px; */
+        /* width: 100%; */
+        /* flex: 1;  */
+         
+         height: 40px;
+    }
+    .details{
+        font-size: 10px;
+        
+    }
+    .detail-flex{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .details img{
+        width: 35px;
+    }
+}
